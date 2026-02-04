@@ -1,0 +1,31 @@
+manifest:
+    remotes:
+        - name: zmkfirmware
+          url-base: https://github.com/zmkfirmware
+        - name: m165437
+          url-base: https://github.com/M165437
+        - name: gpeye
+          url-base: https://github.com/GPeye
+        - name: tokyo2006
+          url-base: https://github.com/tokyo2006
+        - name: englmaxi
+          url-base: https://github.com/englmaxi
+    projects:
+        - name: zmk
+          remote: zmkfirmware
+          revision: v0.3
+          import: app/west.yml
+        - name: nice-view-gem
+          remote: m165437
+          revision: v0.3.0
+        - name: hammerbeam-slideshow
+          remote: gpeye
+          revision: main 
+        - name: prospector-zmk-module
+          remote: tokyo2006
+          revision: change_spi2
+        - name: zmk-dongle-display
+          remote: englmaxi
+          revision: v0.3
+    self:
+        path: config
