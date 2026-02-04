@@ -1,0 +1,52 @@
+name: Build ZMK Firmware
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Cache west modules
+      uses: actions/cache@v3
+      with:
+        path: |
+          .west/modules
+          bootloader
+          modules
+          zephyr
+        key: ${{ runner.os }}-zmk-${{ hashFiles('config/west.yml', 'app/west.yml') }}
+        restore-keys: |
+          ${{ runner.os }}-zmk-
+          
+    - name: Initialize West (nci)
+      uses: action-rs/toolchain@v1
+      with:
+        toolchain: stable
+        
+    - name: West Init
+      run: west init -l config
+      
+    - name: West Update
+      run: west update
+      
+    - name: West Build (left)
+      run: west build -b nice_nano_v2 -- -DSHIELD=eyeslash_corne_left -DZMK_CONFIG="$(pwd)/config"
+      
+    - name: West Build (right)
+      run: west build -b nice_nano_v2 -- -DSHIELD=eyeslash_corne_right -DZMK_CONFIG="$(pwd)/config"
+      
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: firmware
+        path: |
+          build/zephyr/zmk.hex
+          build/zephyr/zmk.uf2
