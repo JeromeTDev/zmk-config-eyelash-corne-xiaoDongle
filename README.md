@@ -1,7 +1,9 @@
 # ZMK Eyeslash Corne with XIAO BLE Dongle
 
-**[English](#english) | [Deutsch](#deutsch)**
+![corne](assets/corne.jpeg)
 
+**[English](#english) | [Deutsch](#deutsch)**
+  
 ---
 
 ## English
@@ -16,16 +18,6 @@ This is my personal [zmk](https://github.com/zmkfirmware/zmk) configuration for 
 
 > This is a dongle setup with ZMK studio support. The left and right keyboard both act as peripherals while the Seed XIAO functions as the main controller. This increases the battery life of the left keyboard compared to using it as both main and left peripheral.
 
-### Hardware Features
-
-#### Eyeslash Corne Features
-- **34-Key Layout**: Enhanced corne design with 5-way switch in thumb cluster
-- **EC11 Encoder**: Multi-functional rotary encoder on the left
-- **RGB Underglow**: WS2812 LED strip with 7 LEDs
-- **SH1106 OLED**: 129×64 display on the dongle
-- **Advanced Mouse Control**: High sensitivity (1200px movement, 20px scroll)
-- **Tap-Dance**: Shift/Caps Lock combination
-
 #### Build Targets
 
 For Dongle (XIAO):
@@ -38,42 +30,7 @@ For Keyboard (Eyeslash Corne):
 - `nano_eyeslash_right.uf2` - Right half
 - `nano_reset_settings.uf2` - Reset persistent settings
 
-#### Keymap Layers
-
-**Layer 0 (QWERTY)**
-Standard typing layer with arrow keys in thumb cluster, volume control via encoder, and tap-dance for Shift/Caps Lock.
-
-**Layer 1 (Number/Mouse)**
-Numbers, function keys, mouse control with enhanced sensitivity, and RGB controls. 5-way switch for navigation.
-
-**Layer 2 (Symbol)**
-Symbols, mouse buttons, output switching (USB/BLE), and extended mouse functions.
-
-**Layer 3 (Function)**
-F-keys, system control, reset functions, and studio unlock for debugging.
-
-#### Features in Detail
-
-**Encoder Functions**
-- **Layer 0**: Volume up/down
-- **Layer 1**: RGB brightness up/down
-- **Layer 2**: Scroll up/down
-
-**5-Way Switch**
-- **Layer 1**: Navigation (Up/Down/Left/Right + Press)
-- **Layer 2**: Mouse functions
-
-**RGB Control**
-- HSV color system with starting color Green (160°)
-- Maximum brightness 90%
-- Auto-off on inactivity and USB connection
-
-**Mouse Control**
-- Movement sensitivity: 1200px (default: 600px)
-- Scroll sensitivity: 20px (default: 10px)
-- XY-scaling processor for precise control
-
-#### Installation
+ #### Installation
 
 **Dongle Flashing (XIAO)**
 1. Connect XIAO dongle to computer
@@ -126,62 +83,19 @@ Dies ist meine persönliche [zmk](https://github.com/zmkfirmware/zmk) Konfigurat
 
 > Dies ist ein Dongle-Setup mit ZMK Studio Support. Die linke und rechte Tastatur agieren beide als Peripheriegeräte, während der Seed XIAO als Hauptcontroller fungiert. Dies erhöht die Batterielaufzeit der linken Tastatur im Vergleich zur Verwendung als Haupt- und linkes Peripheriegerät.
 
-### Hardware Features
 
-#### Eyeslash Corne Besonderheiten
-- **34-Key Layout**: Erweitertes Corne-Design mit 5-Wege-Switch im Daumencluster
-- **EC11 Encoder**: Multi-funktionaler Drehgeber links
-- **RGB Underglow**: WS2812 LED-Stripe mit 7 LEDs
-- **SH1106 OLED**: 129×64 Display auf dem Dongle
-- **Advanced Mouse Control**: Hohe Sensibilität (1200px Bewegung, 20px Scroll)
-- **Tap-Dance**: Shift/Caps Lock Kombination
 
 #### Build-Ziele
 
 Für den Dongle (XIAO):
 - `xiao_eyeslash_dongle_oled.uf2` - Mit OLED Display Support
 - `xiao_eyeslash_dongle.uf2` - Ohne OLED Display
-- `xiao_reset_settings.uf2` - Zumindest Einstellungen zurücksetzen
+- `xiao_reset_settings.uf2` - Einstellungen zurücksetzen
 
 Für die Tastatur (Eyeslash Corne):
 - `nano_eyeslash_left.uf2` - Linke Hälfte
 - `nano_eyeslash_right.uf2` - Rechte Hälfte
-- `nano_reset_settings.uf2` - Zumindest Einstellungen zurücksetzen
-
-#### Keymap Layers
-
-**Layer 0 (QWERTY)**
-Standard-Treibschicht mit Pfeiltasten im Daumencluster, Lautstärkeregelung über Encoder und Tap-Dance für Shift/Caps Lock.
-
-**Layer 1 (Number/Mouse)**
-Ziffern, Funktionstasten, Maussteuerung mit erweiterter Empfindlichkeit und RGB-Kontrollen. 5-Wege-Switch für Navigation.
-
-**Layer 2 (Symbol)**
-Symbole, Mausknöpfe, Output-Switching (USB/BLE) und erweiterte Mausfunktionen.
-
-**Layer 3 (Function)**
-F-Tasten, Systemsteuerung, Reset-Funktionen und Studio-Unlock für Debugging.
-
-#### Features im Detail
-
-**Encoder-Funktionen**
-- **Layer 0**: Lautstärke auf/ab
-- **Layer 1**: RGB Helligkeit auf/ab
-- **Layer 2**: Scroll auf/ab
-
-**5-Wege-Switch**
-- **Layer 1**: Navigation (Hoch/Runter/Links/Rechts + Press)
-- **Layer 2**: Maus-Funktionen
-
-**RGB Steuerung**
-- HSV-Farbsystem mit Startfarbe Grün (160°)
-- Maximale Helligkeit 90%
-- Auto-Off bei Inaktivität und USB-Verbindung
-
-**Mouse Control**
-- Bewegungsempfindlichkeit: 1200px (Standard: 600px)
-- Scroll-Empfindlichkeit: 20px (Standard: 10px)
-- XY-Scaling Processor für präzise Kontrolle
+- `nano_reset_settings.uf2` - Einstellungen zurücksetzen
 
 #### Installation
 
