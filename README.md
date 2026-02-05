@@ -2,6 +2,8 @@
 
 ![corne](assets/corne.jpeg)
 
+![keymap](keymap-drawer/eyeslash_corne.svg)
+
 **[English](#english) | [Deutsch](#deutsch)**
   
 ---
