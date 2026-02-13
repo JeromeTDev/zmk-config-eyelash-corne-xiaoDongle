@@ -17,7 +17,7 @@ This is my personal [zmk](https://githu.com/zmkfirmware/zmk) configuration for m
 - **Dongle**: Seeed XIAO BLE nRF52840
 
 
-> This is a dongle setup with ZMK studio support. The left and right keyboard both act as peripherals while the Seed XIAO functions as the main controller. This increases the battery life of the left keyboard compared to using it as both main and left peripheral. Furthermore you can unlock you your encrypted harddrive before boot.
+> This is a dongle setup with ZMK studio support. The left and right keyboard both act as peripherals while the Seed XIAO functions as the main controller. This increases the battery life of the left keyboard compared to using it as both main and left peripheral. Furthermore you can unlock your encrypted harddrive before boot.
 
 #### Build Targets
 
