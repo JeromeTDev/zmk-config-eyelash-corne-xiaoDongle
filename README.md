@@ -67,23 +67,31 @@ This configuration is optimized for **German developers** using a **US-ANSI base
     - **Integrated Operators:** Arithmetic operators (`/`, `*`, `-`, `+`, `=`) are aligned in a vertical column on the right edge for quick calculations.
     - **Thumb-Zero:** The `0` is mapped to the right thumb for a natural "calculator-style" workflow.
 * **Ergonomics:**
-    - Shift/Caps Lock Tap Dance on the left Shift.
+    - Caps Lock via combo: tap both left and right Shift simultaneously.
     - Backspace/Delete Mod-Morph (Backspace on tap, Delete on Shift+tap).
     - Mouse movement and scrolling integrated into layers.
+* **Combos:** Quick access to brackets and common symbols:
+    - `J` + `K` → `Esc`
+    - `F` + `G` → `(`, `H` + `J` → `)`
+    - `R` + `T` → `[`, `Y` + `U` → `]`
+    - `V` + `B` → `{`, `N` + `M` → `}`
+    - `DOT` + `FSLH` → `\`, `FSLH` + `RSHIFT` → `|`
+    - Both Shifts → `Caps Lock`
 
 #### Dependencies
 
 - ZMK v0.3.0
-- hammerbeam-slideshow (GPeye)
-- prospector-zmk-module (tokyo2006)  
-- zmk-dongle-display (englmaxi)
 - nice-view-gem v0.3.0 (M165437)
+- zmk-dongle-display (englmaxi)
+- prospector-zmk-module (tokyo2006)
 
 #### Build
 
 The project uses GitHub Actions for automated builds. The `.github/workflows/build.yml` file configures the build process for all defined targets.
 
 > The `*_reset_settings.uf2` files are used to clear persistent settings like default layers, BLE pairings, and other saved data that may remain after repeatedly flashing new firmware.
+
+> **Bluetooth:** The dongle never sleeps (`CONFIG_ZMK_SLEEP=n`) so it can always accept connections from both halves. If a half fails to connect, flash `*_reset_settings.uf2` on **both** halves and turn them on again - they will pair with the dongle automatically.
 
 ---
 
@@ -103,9 +111,16 @@ Die Keymap ist für **Software-Entwickler** optimiert, die ein **US-ANSI (QWERTY
     * **Zentrierte Ausrichtung:** Die Zahl **5** liegt genau auf der Taste **J** (rechter Zeigefinger). Da dies die Orientierungstaste mit der fühlbaren Markierung ist, lässt sich das Numpad blind bedienen.
     * **Daumen-Null:** Die `0` liegt auf der rechten Daumentaste, was einen natürlichen "Taschenrechner-Workflow" ermöglicht.
 * **Komfort-Funktionen:**
-    * **Tap-Dance:** Die linke Shift-Taste aktiviert bei doppeltem Tippen den `Caps Lock`.
+    * **Caps-Lock-Combo:** Linke und rechte Shift-Taste gleichzeitig drücken aktiviert den `Caps Lock`.
     * **Mod-Morph:** Die Backspace-Taste wird bei gehaltener Shift-Taste automatisch zur `Entfernen`-Taste (Delete).
     * **Maus-Steuerung:** Cursor-Bewegungen und Scrolling sind direkt in die Layer integriert.
+* **Combos:** Schneller Zugriff auf Klammern und Sonderzeichen:
+    * `J` + `K` → `Esc`
+    * `F` + `G` → `(`, `H` + `J` → `)`
+    * `R` + `T` → `[`, `Y` + `U` → `]`
+    * `V` + `B` → `{`, `N` + `M` → `}`
+    * `DOT` + `FSLH` → `\`, `FSLH` + `RSHIFT` → `|`
+    * Beide Shifts → `Caps Lock`
 
 #### Installation
 
