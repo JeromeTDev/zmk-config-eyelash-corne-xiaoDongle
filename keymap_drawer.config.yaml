@@ -238,6 +238,9 @@ parse_config:
     END: $$mdi:page-last-outline$$
     PG_DN: $$mdi:page-previous-outline$$
 
+    # Deep sleep
+    "&sleep_now": $$mdi:power-sleep$$
+
   zmk_combos:
     combo_backslash:
       key:
