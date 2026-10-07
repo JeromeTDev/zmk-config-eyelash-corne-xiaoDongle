@@ -1,0 +1,13 @@
+# Copyright (c) 2026 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: A behavior that puts the keyboard into deep sleep when released after being held.
+
+compatible: "zmk,behavior-sleep-now"
+
+include: zero_param.yaml
+
+properties:
+  hold-time-ms:
+    type: int
+    default: 500

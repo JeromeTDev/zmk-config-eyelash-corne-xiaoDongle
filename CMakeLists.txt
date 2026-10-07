@@ -1,0 +1,1 @@
+target_sources_ifdef(CONFIG_ZMK_BEHAVIOR_SLEEP_NOW app PRIVATE src/behaviors/behavior_sleep_now.c)

@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) 2026 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    behaviors {
+        sleep_now: z_sleep_now {
+            compatible = "zmk,behavior-sleep-now";
+            #binding-cells = <0>;
+            hold-time-ms = <500>;
+        };
+    };
+};

@@ -133,3 +133,5 @@ zephyr_udc0: &usbd {
     pinctrl-1 = <&pwm0_sleep>;
     pinctrl-names = "default", "sleep";
 };
+
+#include <behaviors/sleep_now.dtsi>
