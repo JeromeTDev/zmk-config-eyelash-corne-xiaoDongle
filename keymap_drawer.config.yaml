@@ -96,6 +96,9 @@ parse_config:
     "&sys_reset": $$mdi:backup-restore$$
     "&bootloader": $$mdi:progress-download$$
 
+    # Deep sleep
+    "&sleep_now": $$mdi:power-sleep$$
+
   zmk_keycode_map:
     # Symbols
     EXCLAMATION: "!"
@@ -237,9 +240,6 @@ parse_config:
     PG_UP: $$mdi:page-next-outline$$
     END: $$mdi:page-last-outline$$
     PG_DN: $$mdi:page-previous-outline$$
-
-    # Deep sleep
-    "&sleep_now": $$mdi:power-sleep$$
 
   zmk_combos:
     combo_backslash:
