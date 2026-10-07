@@ -125,7 +125,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - '&sleep_now'
+  - $$mdi:power-sleep$$
   - F12
   - RGB TOG
   - RGB EFF
