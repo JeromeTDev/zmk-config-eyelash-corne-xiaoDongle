@@ -104,6 +104,15 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adjust_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -135,12 +144,22 @@
             display-name = "fn";
             bindings = <
 &trans           &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                     &mmv MOVE_UP                     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10   &kp F11
-&trans           &kp RA(Q)        &kp RA(S)        &kp RA(P)        &kp RA(Y)        &kp PRINTSCREEN            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &sleep_now     &kp F12
+&trans           &kp RA(Q)        &kp RA(S)        &kp RA(P)        &kp RA(Y)        &kp PRINTSCREEN            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &none     &kp F12
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &trans                    &mmv MOVE_DOWN                   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp MB1  &mkp MB2
                                                    &kp C_VOL_DN     &kp C_VOL_UP     &kp K_MUTE                                                                  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        adjust_layer {
+            display-name = "adjust";
+            bindings = <
+&sleep_now  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
