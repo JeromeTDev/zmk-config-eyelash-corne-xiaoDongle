@@ -96,8 +96,8 @@ parse_config:
     "&sys_reset": $$mdi:backup-restore$$
     "&bootloader": $$mdi:progress-download$$
 
-    # Deep sleep
-    "&sleep_now": $$mdi:power-sleep$$
+    # Soft reset
+    "&reset_now": $$mdi:restart$$
 
   zmk_keycode_map:
     # Symbols

@@ -70,7 +70,7 @@ This configuration is optimized for **German developers** using a **US-ANSI base
     - Caps Lock via combo: tap both left and right Shift simultaneously.
     - Backspace/Delete Mod-Morph (Backspace on tap, Delete on Shift+tap).
     - Mouse movement and scrolling integrated into layers.
-* **Deep Sleep:** Hold the `fn` layer (right thumb `Space`) and press the top-left `Esc` key for at least 0.5 s to put **both halves to sleep**. The USB-powered dongle stays awake. Press any key to wake the halves; they reconnect to the dongle automatically.
+* **Soft Reset:** Hold the `fn` layer (right thumb `Space`) and press the top-left `Esc` key for at least 0.5 s to **soft-reset both halves**. The USB-powered dongle stays awake and the halves reconnect to it automatically - handy whenever a half refuses to re-establish the split connection.
 * **Combos:** Quick access to brackets and common symbols:
     - `J` + `K` → `Esc`
     - `F` + `G` → `(`, `H` + `J` → `)`
@@ -84,7 +84,7 @@ This configuration is optimized for **German developers** using a **US-ANSI base
 - ZMK v0.3.0
 - nice-view-gem v0.3.0 (M165437)
 - zmk-dongle-display (englmaxi)
-- Custom `sleep_now` behavior (this repo)
+- Custom `reset_now` behavior (this repo)
 
 #### Build
 
@@ -115,7 +115,7 @@ Die Keymap ist für **Software-Entwickler** optimiert, die ein **US-ANSI (QWERTY
     * **Caps-Lock-Combo:** Linke und rechte Shift-Taste gleichzeitig drücken aktiviert den `Caps Lock`.
     * **Mod-Morph:** Die Backspace-Taste wird bei gehaltener Shift-Taste automatisch zur `Entfernen`-Taste (Delete).
     * **Maus-Steuerung:** Cursor-Bewegungen und Scrolling sind direkt in die Layer integriert.
-* **Tiefschlaf:** Den `fn`-Layer halten (rechter Daumen `Space`) und die oberste linke `Esc`-Taste mindestens 0,5 s drücken, um **beide Hälften schlafen zu legen**. Der USB-versorgte Dongle bleibt an. Zum Aufwecken eine beliebige Taste drücken; die Hälften verbinden sich automatisch wieder mit dem Dongle.
+* **Soft-Reset:** Den `fn`-Layer halten (rechter Daumen `Space`) und die oberste linke `Esc`-Taste mindestens 0,5 s drücken, um **beide Hälften neu zu starten** (Soft-Reset). Der USB-versorgte Dongle bleibt an; die Hälften verbinden sich automatisch wieder mit ihm. Praktisch, wenn sich eine Hälfte nicht mehr mit dem Split-Link verbinden will.
 * **Combos:** Schneller Zugriff auf Klammern und Sonderzeichen:
     * `J` + `K` → `Esc`
     * `F` + `G` → `(`, `H` + `J` → `)`
