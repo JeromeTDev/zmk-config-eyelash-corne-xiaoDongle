@@ -99,7 +99,7 @@ layers:
   - {t: '0', s: )}
   - {t: ',', s: <}
   fn:
-  - $$mdi:power-sleep$$
+  - $$mdi:restart$$
   - F1
   - F2
   - F3
