@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - "config/**"
-      - .github/workflows/draw.yml
+      - .github/workflows/draw.yaml
       - keymap_drawer.config.yaml
 
 env:

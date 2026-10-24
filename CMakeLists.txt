@@ -1,1 +1,0 @@
-target_sources_ifdef(CONFIG_ZMK_BEHAVIOR_RESET_NOW app PRIVATE src/behaviors/behavior_reset_now.c)

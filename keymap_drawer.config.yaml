@@ -16,7 +16,7 @@ draw_config:
   arc_radius: 6.0
   append_colon_to_layer_header: true
   small_pad: 2.0
-  darmode: auto
+  dark_mode: auto
   svg_extra_style: |
     svg.keymap {
       font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
@@ -96,8 +96,22 @@ parse_config:
     "&sys_reset": $$mdi:backup-restore$$
     "&bootloader": $$mdi:progress-download$$
 
-    # Soft reset
-    "&reset_now": $$mdi:restart$$
+    # Bluetooth (tap = F-key, hold = BT action)
+    "&bt_f1":
+      tap: F1
+      hold: "BT0"
+    "&bt_f2":
+      tap: F2
+      hold: "BT1"
+    "&bt_f3":
+      tap: F3
+      hold: "BT2"
+    "&bt_f4":
+      tap: F4
+      hold: $$mdi:bluetooth-off$$
+    "&bt_f5":
+      tap: F5
+      hold: $$mdi:usb-port$$
 
   zmk_keycode_map:
     # Symbols

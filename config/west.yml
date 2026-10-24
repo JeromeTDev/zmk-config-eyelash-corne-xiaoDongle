@@ -4,8 +4,6 @@ manifest:
           url-base: https://github.com/zmkfirmware
         - name: m165437
           url-base: https://github.com/M165437
-        - name: gpeye
-          url-base: https://github.com/GPeye
         - name: englmaxi
           url-base: https://github.com/englmaxi
     projects:

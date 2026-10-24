@@ -1,0 +1,19 @@
+# ZMK build artifacts
+/build/
+/.west/
+/modules/
+/zephyr/
+/zmk/
+/bootloader/
+/tools/
+*.uf2
+*.bin
+*.hex
+*.elf
+
+# Keymap drawer temp
+*.keymap.bak
+
+# OS
+.DS_Store
+Thumbs.db

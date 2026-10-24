@@ -10,7 +10,7 @@
 
 ## English
 
-This is my personal [zmk](https://githu.com/zmkfirmware/zmk) configuration for my
+This is my personal [ZMK](https://github.com/zmkfirmware/zmk) configuration for my
 [eyeslash_corne](https://de.aliexpress.com/item/1005008551330418.html?spm=a2g0o.order_list.order_list_main.5.21ef5c5fdIQpG1&gatewayAdapt=glo2deu) keyboard. The firmware is developed for the following hardware:
 
 - **Keyboard**: Eyeslash Corne
@@ -70,9 +70,10 @@ This configuration is optimized for **German developers** using a **US-ANSI base
     - Caps Lock via combo: tap both left and right Shift simultaneously.
     - Backspace/Delete Mod-Morph (Backspace on tap, Delete on Shift+tap).
     - Mouse movement and scrolling integrated into layers.
-* **Soft Reset:** Hold the `fn` layer (right thumb `Space`) and press the top-left `Esc` key for at least 0.5 s to **soft-reset both halves**. The USB-powered dongle stays awake and the halves reconnect to it automatically - handy whenever a half refuses to re-establish the split connection.
+* **Bluetooth Profiles:** Hold the `fn` layer (right thumb `Space`) and **long-press** `F1` / `F2` / `F3` to select profiles 0 / 1 / 2. A long press on `F4` clears the current profile, and a long press on `F5` toggles the USB/BLE output. Short taps still send `F1`–`F5` as usual.
 * **Combos:** Quick access to brackets and common symbols:
     - `J` + `K` → `Esc`
+    - `L` + `;` → `~`, `;` + `'` → `` ` ``
     - `F` + `G` → `(`, `H` + `J` → `)`
     - `R` + `T` → `[`, `Y` + `U` → `]`
     - `V` + `B` → `{`, `N` + `M` → `}`
@@ -84,7 +85,6 @@ This configuration is optimized for **German developers** using a **US-ANSI base
 - ZMK v0.3.0
 - nice-view-gem v0.3.0 (M165437)
 - zmk-dongle-display (englmaxi)
-- Custom `reset_now` behavior (this repo)
 
 #### Build
 
@@ -115,9 +115,10 @@ Die Keymap ist für **Software-Entwickler** optimiert, die ein **US-ANSI (QWERTY
     * **Caps-Lock-Combo:** Linke und rechte Shift-Taste gleichzeitig drücken aktiviert den `Caps Lock`.
     * **Mod-Morph:** Die Backspace-Taste wird bei gehaltener Shift-Taste automatisch zur `Entfernen`-Taste (Delete).
     * **Maus-Steuerung:** Cursor-Bewegungen und Scrolling sind direkt in die Layer integriert.
-* **Soft-Reset:** Den `fn`-Layer halten (rechter Daumen `Space`) und die oberste linke `Esc`-Taste mindestens 0,5 s drücken, um **beide Hälften neu zu starten** (Soft-Reset). Der USB-versorgte Dongle bleibt an; die Hälften verbinden sich automatisch wieder mit ihm. Praktisch, wenn sich eine Hälfte nicht mehr mit dem Split-Link verbinden will.
+* **Bluetooth-Profile:** Den `fn`-Layer halten (rechter Daumen `Space`) und `F1` / `F2` / `F3` **lange drücken**, um Profil 0 / 1 / 2 auszuwählen. Ein langer Druck auf `F4` löscht das aktuelle Profil, ein langer Druck auf `F5` schaltet zwischen USB- und BLE-Ausgabe um. Kurzes Tippen sendet weiterhin normal `F1`–`F5`.
 * **Combos:** Schneller Zugriff auf Klammern und Sonderzeichen:
     * `J` + `K` → `Esc`
+    * `L` + `;` → `~`, `;` + `'` → `` ` ``
     * `F` + `G` → `(`, `H` + `J` → `)`
     * `R` + `T` → `[`, `Y` + `U` → `]`
     * `V` + `B` → `{`, `N` + `M` → `}`

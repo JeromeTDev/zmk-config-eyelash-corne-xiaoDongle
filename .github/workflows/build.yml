@@ -1,9 +1,15 @@
 name: Build ZMK firmware
 on: [workflow_dispatch]
 
+permissions:
+  contents: read
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    permissions:
+      contents: read
+      actions: read
