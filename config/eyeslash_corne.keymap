@@ -102,7 +102,7 @@
         // Tap = F-key, hold = Bluetooth action
         bt_f1: bt_f1 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <500>;
             bindings = <&bt0>, <&tap_f1>;
@@ -110,7 +110,7 @@
 
         bt_f2: bt_f2 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <500>;
             bindings = <&bt1>, <&tap_f2>;
@@ -118,7 +118,7 @@
 
         bt_f3: bt_f3 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <500>;
             bindings = <&bt2>, <&tap_f3>;
@@ -126,7 +126,7 @@
 
         bt_f4: bt_f4 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <500>;
             bindings = <&bt_clr>, <&tap_f4>;
@@ -134,7 +134,7 @@
 
         bt_f5: bt_f5 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <500>;
             bindings = <&out_toggle>, <&tap_f5>;
@@ -249,7 +249,7 @@
         raise_layer {
             display-name = "fn";
             bindings = <
-&trans           &bt_f1           &bt_f2           &bt_f3           &bt_f4           &bt_f5                                     &mmv MOVE_UP                     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10   &kp F11
+&trans           &bt_f1 0 0           &bt_f2 0 0           &bt_f3 0 0           &bt_f4 0 0           &bt_f5 0 0                                     &mmv MOVE_UP                     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10   &kp F11
 &trans           &kp RA(Q)        &kp RA(S)        &kp RA(P)        &kp RA(Y)        &kp PRINTSCREEN            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &none     &kp F12
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &trans                    &mmv MOVE_DOWN                   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp MB1  &mkp MB2
                                                    &kp C_VOL_DN     &kp C_VOL_UP     &kp K_MUTE                                                                  &trans          &trans          &trans
