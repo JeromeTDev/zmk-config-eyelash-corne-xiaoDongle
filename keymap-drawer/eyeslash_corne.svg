@@ -235,19 +235,33 @@ rect.held, rect.combo.held { fill: #ffc; }
 .toggle.shifted { translate: -10px 12px; }
 .toggle.hold { translate: 13px -23px; }
 
-/* Highlight hold-tap long-press actions (z. B. BT0-2, BT-Clear, USB/BT) */
-.key.hold-tap > rect.key:not(.side) {
-  fill: #f59e0b;
-  fill-opacity: 0.18;
-  stroke: #f59e0b;
+/* Highlight layer-tap / layer keys (e.g. SPACE/ENTER with layer hold) */
+.key.layer-tap > rect.key:not(.side) {
+  fill: #38bdf8;
+  fill-opacity: 0.16;
+  stroke: #38bdf8;
   stroke-width: 1.4px;
 }
-.key.hold-tap > rect.key.side {
-  stroke: #f59e0b;
+.key.layer-tap > rect.key.side {
+  stroke: #38bdf8;
   stroke-width: 1.4px;
 }
-.key.hold-tap .hold {
-  fill: #f59e0b;
+.key.layer-tap .hold {
+  fill: #38bdf8;
+  font-weight: bold;
+}
+.key.momentary-layer > rect.key:not(.side) {
+  fill: #a78bfa;
+  fill-opacity: 0.16;
+  stroke: #a78bfa;
+  stroke-width: 1.4px;
+}
+.key.momentary-layer > rect.key.side {
+  stroke: #a78bfa;
+  stroke-width: 1.4px;
+}
+.key.momentary-layer .hold {
+  fill: #a78bfa;
   font-weight: bold;
 }
 </style>
@@ -886,35 +900,35 @@ rect.held, rect.combo.held { fill: #ffc; }
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(84, 49)" class="key hold-tap keypos-1">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key hold-tap side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key hold-tap"/>
-<text x="0" y="-4" class="key hold-tap tap">F1</text>
-<text x="0" y="24" class="key hold-tap hold">BT0</text>
+<g transform="translate(84, 49)" class="key keypos-1">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">F1</text>
+<text x="0" y="24" class="key hold">BT0</text>
 </g>
-<g transform="translate(140, 35)" class="key hold-tap keypos-2">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key hold-tap side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key hold-tap"/>
-<text x="0" y="-4" class="key hold-tap tap">F2</text>
-<text x="0" y="24" class="key hold-tap hold">BT1</text>
+<g transform="translate(140, 35)" class="key keypos-2">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">F2</text>
+<text x="0" y="24" class="key hold">BT1</text>
 </g>
-<g transform="translate(196, 28)" class="key hold-tap keypos-3">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key hold-tap side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key hold-tap"/>
-<text x="0" y="-4" class="key hold-tap tap">F3</text>
-<text x="0" y="24" class="key hold-tap hold">BT2</text>
+<g transform="translate(196, 28)" class="key keypos-3">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">F3</text>
+<text x="0" y="24" class="key hold">BT2</text>
 </g>
-<g transform="translate(252, 35)" class="key hold-tap keypos-4">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key hold-tap side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key hold-tap"/>
-<text x="0" y="-4" class="key hold-tap tap">F4</text>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-8" y="9" height="15" width="15.0" class="key hold-tap hold glyph mdi:bluetooth-off"/>
+<g transform="translate(252, 35)" class="key keypos-4">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">F4</text>
+<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:bluetooth-off"/>
 </g>
-<g transform="translate(308, 41)" class="key hold-tap keypos-5">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key hold-tap side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key hold-tap"/>
-<text x="0" y="-4" class="key hold-tap tap">F5</text>
-<use href="#mdi:usb-port" xlink:href="#mdi:usb-port" x="-8" y="9" height="15" width="15.0" class="key hold-tap hold glyph mdi:usb-port"/>
+<g transform="translate(308, 41)" class="key keypos-5">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">F5</text>
+<use href="#mdi:usb-port" xlink:href="#mdi:usb-port" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:usb-port"/>
 </g>
 <g transform="translate(546, 41)" class="key keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
