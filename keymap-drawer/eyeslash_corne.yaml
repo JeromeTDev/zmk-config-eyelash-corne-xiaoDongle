@@ -100,11 +100,11 @@ layers:
   - {t: ',', s: <}
   fn:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: F1, h: BT0}
-  - {t: F2, h: BT1}
-  - {t: F3, h: BT2}
-  - {t: F4, h: '$$mdi:bluetooth-off$$'}
-  - {t: F5, h: '$$mdi:usb-port$$'}
+  - {t: F1, h: BT0, type: hold-tap}
+  - {t: F2, h: BT1, type: hold-tap}
+  - {t: F3, h: BT2, type: hold-tap}
+  - {t: F4, h: '$$mdi:bluetooth-off$$', type: hold-tap}
+  - {t: F5, h: '$$mdi:usb-port$$', type: hold-tap}
   - $$mdi:menu-up$$
   - F6
   - F7
@@ -150,6 +150,8 @@ layers:
 combos:
 - p: [28, 41]
   k: $$mdi:apple-keyboard-caps$$
+  a: bottom
+  o: 1.4
 - p: [23, 24]
   k: $$mdi:keyboard-esc$$
 - p: [25, 26]
