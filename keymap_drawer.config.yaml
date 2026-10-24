@@ -32,6 +32,22 @@ draw_config:
     .toggle.shifted { translate: -10px 12px; }
     .toggle.hold { translate: 13px -23px; }
 
+    /* Highlight hold-tap long-press actions (z. B. BT0-2, BT-Clear, USB/BT) */
+    .key.hold-tap > rect.key:not(.side) {
+      fill: #f59e0b;
+      fill-opacity: 0.18;
+      stroke: #f59e0b;
+      stroke-width: 1.4px;
+    }
+    .key.hold-tap > rect.key.side {
+      stroke: #f59e0b;
+      stroke-width: 1.4px;
+    }
+    .key.hold-tap .hold {
+      fill: #f59e0b;
+      font-weight: bold;
+    }
+
   shrink_wide_legends: 6
   glyph_tap_size: 18
   glyph_hold_size: 15
@@ -98,18 +114,23 @@ parse_config:
 
     # Bluetooth (tap = F-key, hold = BT action)
     "&bt_f1":
+      type: hold-tap
       tap: F1
       hold: "BT0"
     "&bt_f2":
+      type: hold-tap
       tap: F2
       hold: "BT1"
     "&bt_f3":
+      type: hold-tap
       tap: F3
       hold: "BT2"
     "&bt_f4":
+      type: hold-tap
       tap: F4
       hold: $$mdi:bluetooth-off$$
     "&bt_f5":
+      type: hold-tap
       tap: F5
       hold: $$mdi:usb-port$$
 
@@ -256,6 +277,9 @@ parse_config:
     PG_DN: $$mdi:page-previous-outline$$
 
   zmk_combos:
+    combo_caps:
+      align: bottom
+      offset: 1.4
     combo_backslash:
       key:
         shifted: "|"
